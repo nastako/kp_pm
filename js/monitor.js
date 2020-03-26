@@ -873,7 +873,7 @@ class Monitor {
             r.splitAveragePace =      (v[o+6] + (v[o+7] << 8)) * 0.01;
             r.splitAveragePower =     (v[o+8] + (v[o+9] << 8));
             r.splitAverageCalories =  (v[o+10] + (v[o+11] << 8));
-            r.lastSplitTime =         (v[o+12] + (v[o+13] << 8) + (v[o+14] << 16));
+            r.lastSplitTime =         (v[o+12] + (v[o+13] << 8) + (v[o+14] << 16))* 0.01;
             r.lastSplitDistance =     (v[o+15] + (v[o+16] << 8) + (v[o+17] << 16));
         } else {
             r.elapsedTime =           (v[o+0] + (v[o+1] << 8) + (v[o+2] << 16)) * 0.01;
@@ -883,7 +883,7 @@ class Monitor {
             r.splitAveragePace =      (v[o+8] + (v[o+9] << 8)) * 0.01;
             r.splitAveragePower =     (v[o+10] + (v[o+11] << 8));
             r.splitAverageCalories =  (v[o+12] + (v[o+13] << 8));
-            r.lastSplitTime =         (v[o+14] + (v[o+15] << 8) + (v[o+16] << 16));
+            r.lastSplitTime =         (v[o+14] + (v[o+15] << 8) + (v[o+16] << 16))* 0.01;
             r.lastSplitDistance =     (v[o+17] + (v[o+18] << 8) + (v[o+19] << 16));
         };
 
