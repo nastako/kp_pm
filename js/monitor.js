@@ -929,8 +929,8 @@ class Monitor {
             r.driveTime =             v[o+7] * 0.01;
             r.strokeRecoveryTime =    (v[o+8] + (v[o+9] << 8)) * 0.01;
             r.strokeDistance =        (v[o+10] + (v[o+11] << 8)) * 0.01;
-            r.peakDriveForce =        (v[o+12] + (v[o+13] << 8)) * 0.1;   /* XXX pounds */
-            r.averageDriveForce =     (v[o+14] + (v[o+15] << 8)) * 0.1;   /* XXX pounds */
+            r.peakDriveForce =        (v[o+12] + (v[o+13] << 8)) * 0.1 * 0.45359237;   /* kg from pounds */
+            r.averageDriveForce =     (v[o+14] + (v[o+15] << 8)) * 0.1 * 0.45359237;   /* kg from pounds */
             r.strokeCount =           (v[o+16] + (v[o+17] << 8));
         } else {
             r.elapsedTime =           (v[o+0] + (v[o+1] << 8) + (v[o+2] << 16)) * 0.01;
@@ -939,8 +939,8 @@ class Monitor {
             r.driveTime =             v[o+7] * 0.01;
             r.strokeRecoveryTime =    (v[o+8] + (v[o+9] << 8)) * 0.01;
             r.strokeDistance =        (v[o+10] + (v[o+11] << 8)) * 0.01;
-            r.peakDriveForce =        (v[o+12] + (v[o+13] << 8)) * 0.1;   /* XXX pounds */
-            r.averageDriveForce =     (v[o+14] + (v[o+15] << 8)) * 0.1;   /* XXX pounds */
+            r.peakDriveForce =        (v[o+12] + (v[o+13] << 8)) * 0.1 * 0.45359237;   /* kg from pounds */
+            r.averageDriveForce =     (v[o+14] + (v[o+15] << 8)) * 0.1 * 0.45359237;   /* kg from pounds */
             r.workPerStroke =         (v[o+16] + (v[o+17] << 8));
             r.strokeCount =           (v[o+18] + (v[o+19] << 8));
         }
