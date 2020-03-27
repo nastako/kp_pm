@@ -1,19 +1,18 @@
 'use strict';
 // save file at clear
-function download(filename, text) {
-    var pom = document.createElement('a');
-    pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-    pom.setAttribute('download', filename);
-
-    if (document.createEvent) {
-        var event = document.createEvent('MouseEvents');
-        event.initEvent('click', true, true);
-        pom.dispatchEvent(event);
-    }
-    else {
-        pom.click();
-    }
 }
+function download(filename, text) {
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  element.setAttribute('download', filename);
+
+  element.style.display = 'none';
+  document.body.appendChild(element);
+  element.click();
+  document.body.removeChild(element);
+}
+
+
 //
 
 let m = new Monitor();
@@ -38,7 +37,9 @@ let printJson = function(o) {
 
 let clearDebug = function() {
     // save file
-    download('test.txt', document.getElementById('debug').innerHTML );
+    var text = document.getElementById('debug').innerHTML
+    var filename = "test.txt";
+    download(filename, text );
     //
     document.getElementById('debug').innerHTML = '';
 };
