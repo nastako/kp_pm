@@ -580,7 +580,7 @@ class Monitor {
                  * with Concept2 to see if this is the case, and what
                  * service we need to associate this characteristic with.
                  */
-                // return this._addForceCurveData();
+                return this._addForceCurveData();
                 break;
 
             default:
