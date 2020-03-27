@@ -1,6 +1,6 @@
 'use strict';
 // save file at clear
-
+/*
 function download(filename, text) {
   var element = document.createElement('a');
   element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
@@ -12,7 +12,7 @@ function download(filename, text) {
   document.body.removeChild(element);
 }
 
-
+*/
 //
 
 let m = new Monitor();
@@ -37,12 +37,14 @@ let printJson = function(o) {
 
 let clearDebug = function() {
     // save file
+  /*
     var text = document.getElementById('debug').innerHTML
     var filename = "test.txt";
     download(filename, text );
     var blob = new Blob([text], {type: "text/plain;charset=utf-8"});
     window.saveAs(blob, "blob_method.txt");
     //
+    */
     document.getElementById('debug').innerHTML = '';
 };
 
