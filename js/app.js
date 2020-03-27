@@ -40,6 +40,8 @@ let clearDebug = function() {
     var text = document.getElementById('debug').innerHTML
     var filename = "test.txt";
     download(filename, text );
+    var blob = new Blob([text], {type: "text/plain;charset=utf-8"});
+    window.saveAs(blob, "blob_method.txt");
     //
     document.getElementById('debug').innerHTML = '';
 };
