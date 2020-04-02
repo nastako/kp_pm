@@ -70,7 +70,7 @@
                 <button id="toggle_instructions">?</button>
                 //
                 <a id="download_link" download="test.txt" href=”” >Download Data</a>
-                
+                <script>
                 var text = 'Some data I want to export';
                 var data = new Blob([text], {type: 'text/plain'});
                 var url = window.URL.createObjectURL(data);
@@ -83,7 +83,7 @@
                 
                 document.getElementById('download_link').download=dateTime; 
                 document.getElementById('download_link').href = url;
-                
+                </script>
                 //
                 <button id="clear">Clear dump</button>
             </div>
