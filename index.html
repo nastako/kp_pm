@@ -67,7 +67,8 @@
             <span id="monitorInformation"></span>
             
             <!-- my download -->
-	    <a id="dwld_html" download href='' >HTML</a>
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	    <a id="dwld_html" download='' href='' >HTML</a>
 	    <script>
 	    var today = new Date();
 	    var yy = today.getFullYear();
@@ -76,14 +77,12 @@
 	    var hh = (today.getHours() < 10 ? '0' : '') + today.getHours();  
 	    var mm = (today.getMinutes() < 10 ? '0' : '') + today.getMinutes();
             var ss = (today.getSeconds() < 10 ? '0' : '') + today.getSeconds(); 
-            var dateTime = yy+mnt+dd+'_'+hh+mm+ss'  
+            var dateTime = yy+mnt+dd+'_'+hh+mm+ss';  
             document.getElementById('dwld_html').download=dateTime; 
 	    document.write(datetTime);
             </script>
-		
 	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		
-            <a id="download_link" download='test' href='' >TXT</a>
+            <a id="download_txt" download='test' href='' >TXT</a>
             <script>
             var text = document.getElementById('debug').innerHTML;
 	    if (text.length == 0) {text = "Good day";}
@@ -99,12 +98,13 @@
             var ss = (today.getSeconds() < 10 ? '0' : '') + today.getSeconds(); 
             var dateTime = yy+mnt+dd+'_'+hh+mm+ss+'.txt';
                
-            document.getElementById('download_link').download=dateTime; 
-            document.getElementById('download_link').href = url;
+            document.getElementById('download_txt').download=dateTime; 
+            document.getElementById('download_txt').href = url;
 	    document.write(text);
             document.write("         ");
 	    document.write(datetTime);
             </script>
+
             <!-- my download end-->
 
             <div class="right">
