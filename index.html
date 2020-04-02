@@ -65,26 +65,27 @@
             <button id="connect">Connect</button>
             <button id="toggle_messages">Toggle message types</button>
             <span id="monitorInformation"></span>
+            
+            <!-- my download -->
+            <a id="download_link" download="test.txt" href=”” >Download Data</a>
+            <script>
+            var text = 'Some data I want to export';
+            var data = new Blob([text], {type: 'text/plain'});
+            var url = window.URL.createObjectURL(data);
+            
+            var today = new Date();
+            var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+            var time = today.getHours() + today.getMinutes() + today.getSeconds();
+            var dateTime = date+'_'+time+'.txt';
+               
+            document.getElementById('download_link').download=dateTime; 
+            document.getElementById('download_link').href = url;
+            </script>
+            <!-- my download end-->
 
             <div class="right">
                 <button id="toggle_instructions">?</button>
-                <!-- my download -->
-                <a id="download_link" download="test.txt" href=”” >Download Data</a>
-                <script>
-                var text = 'Some data I want to export';
-                var data = new Blob([text], {type: 'text/plain'});
-                var url = window.URL.createObjectURL(data);
                 
-                
-                var today = new Date();
-                var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-                var time = today.getHours() + today.getMinutes() + today.getSeconds();
-                var dateTime = date+'_'+time+'.txt';
-                
-                document.getElementById('download_link').download=dateTime; 
-                document.getElementById('download_link').href = url;
-                </script>
-                <!-- my download end-->
                 <button id="clear">Clear dump</button>
             </div>
 
