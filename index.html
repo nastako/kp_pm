@@ -69,7 +69,7 @@
             <!-- my download -->
             <a id="download_link" download="test.txt" href=”” >Download Data</a>
             <script>
-            var text = 'Some data I want to export';
+            var text = document.getElementById('debug').innerHTML;
             var data = new Blob([text], {type: 'text/plain'});
             var url = window.URL.createObjectURL(data);
             
