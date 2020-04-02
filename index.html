@@ -68,6 +68,19 @@
             
             <!-- my download -->
 	    <a id="dwld_html" download href='' >HTML</a>
+	    <script>
+	    var today = new Date();
+	    var yy = today.getFullYear();
+            var dd = (today.getDate() < 10 ? '0' : '') + today.getDate();        
+            var mnt = ((today.getMonth() + 1) < 10 ? '0' : '')+(today.getMonth() + 1); 
+	    var hh = (today.getHours() < 10 ? '0' : '') + today.getHours();  
+	    var mm = (today.getMinutes() < 10 ? '0' : '') + today.getMinutes();
+            var ss = (today.getSeconds() < 10 ? '0' : '') + today.getSeconds(); 
+            var dateTime = yy+mnt+dd+'_'+hh+mm+ss'  
+            document.getElementById('dwld_html').download=dateTime; 
+	    document.write(datetTime);
+            </script>
+		
 	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		
             <a id="download_link" download='test' href='' >TXT</a>
