@@ -53,6 +53,13 @@
         </style>
     </head>
 
+    
+    
+    
+    
+    
+    
+    
     <body>
         <div id="configuration">
             <button id="connect">Connect</button>
@@ -61,6 +68,23 @@
 
             <div class="right">
                 <button id="toggle_instructions">?</button>
+                //
+                <a id="download_link" download="test.txt" href=”” >Download Data</a>
+                
+                var text = 'Some data I want to export';
+                var data = new Blob([text], {type: 'text/plain'});
+                var url = window.URL.createObjectURL(data);
+                
+                
+                var today = new Date();
+                var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+                var time = today.getHours() + today.getMinutes() + today.getSeconds();
+                var dateTime = date+'_'+time+'.txt';
+                
+                document.getElementById('download_link').download=dateTime; 
+                document.getElementById('download_link').href = url;
+                
+                //
                 <button id="clear">Clear dump</button>
             </div>
 
