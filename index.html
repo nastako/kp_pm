@@ -78,8 +78,7 @@
 	    var mm = (today.getMinutes() < 10 ? '0' : '') + today.getMinutes();
             var ss = (today.getSeconds() < 10 ? '0' : '') + today.getSeconds(); 
             var dateTime = yy+mnt+dd+'_'+hh+mm+ss';  
-            document.getElementById('dwld_html').download=dateTime; 
-	    document.write(datetTime);
+            document.getElementById('dwld_html').download=dateTime;
             </script>
 	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a id="download_txt" download='test' href='' >TXT</a>
@@ -100,9 +99,6 @@
                
             document.getElementById('download_txt').download=dateTime; 
             document.getElementById('download_txt').href = url;
-	    document.write(text);
-            document.write("         ");
-	    document.write(datetTime);
             </script>
 
             <!-- my download end-->
