@@ -69,14 +69,18 @@
             <!-- my download -->
             <a id="download_link" download="test.txt" href=”” >Dwld</a>
             <script>
-            var text = document.getElementById('debug').innerHTML;
+            var text = 'some text to download';
             var data = new Blob([text], {type: 'text/plain'});
             var url = window.URL.createObjectURL(data);
             
             var today = new Date();
-            var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-            var time = today.getHours() + today.getMinutes() + today.getSeconds();
-            var dateTime = date+'_'+time+'.txt';
+		    var yy = today.getFullYear();
+            var dd = (today.getDate() < 10 ? '0' : '') + today.getDate();        
+            var MM = ((dtoday.getMonth() + 1) < 10 ? '0' : '')+(today.getMonth() + 1); 
+		    var hh = (today..getHours() < 10 ? '0' : '') + today.getHours();  
+		    var mm = (today.getMinutes() < 10 ? '0' : '') + today.getMinutes();
+		    var ss = (today.getSeconds() < 10 ? '0' : '') + today.getSeconds(); 
+		    var dateTime = yy+MM+dd+'_'+hh+mm+ss+'.txt';
                
             document.getElementById('download_link').download=dateTime; 
             document.getElementById('download_link').href = url;
