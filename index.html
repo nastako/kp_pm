@@ -67,9 +67,9 @@
             <span id="monitorInformation"></span>
             
             <!-- my download -->
-            <a id="download_link" download="" href=”” >Dwold</a>
+            <a id="download_link" download href='' >Dwld</a>
             <script>
-            var text = "some text to download";
+            var text = 'Some data I want to export';
             var data = new Blob([text], {type: 'text/plain'});
             var url = window.URL.createObjectURL(data);
             
@@ -84,6 +84,7 @@
                
             document.getElementById('download_link').download=dateTime; 
             document.getElementById('download_link').href = url;
+	    window.URL.revokeObjectURL(url);
             </script>
             <!-- my download end-->
 
