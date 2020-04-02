@@ -67,8 +67,8 @@
             <span id="monitorInformation"></span>
             
             <!-- my download -->
-	    <a id="download_html" download href='' >HTML</a>
-		<span>&nbsp;&nbsp;&nbsp;</span>
+	    <a id="dwld_html" download href='' >HTML</a>
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		
             <a id="download_link" download='test' href='' >TXT</a>
             <script>
@@ -88,7 +88,9 @@
                
             document.getElementById('download_link').download=dateTime; 
             document.getElementById('download_link').href = url;
-
+	    document.write(text);
+            document.write("         ");
+	    document.write(datetTime);
             </script>
             <!-- my download end-->
 
