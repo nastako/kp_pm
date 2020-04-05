@@ -14,7 +14,7 @@ function download(filename, text) {
 
 */
 function saveAs(){
-  var sMarkup =  document.getElementById('debug').innerHTML; 
+  const sMarkup =  document.getElementById('debug').innerHTML; 
   var oNewDoc = document.open('text/html');     
   oNewDoc.write( sMarkup + "<hr>" );
   oNewDoc.close();
