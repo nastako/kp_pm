@@ -30,7 +30,8 @@ function saveAs(){
   
   const sMarkup =  document.getElementById('debug').innerHTML; 
   var element = document.createElement('a');
-  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(sMarkup));
+  element.setAttribute('href', 'data:text/html;charset=utf-8,' + encodeURIComponent(sMarkup));
+  //element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(sMarkup));	
   element.setAttribute('download', dateTime);
   element.style.display = 'none';
   document.body.appendChild(element);
