@@ -19,17 +19,24 @@ function saveAs(){
     }
 */
 function saveAs(){
+  var today = new Date();
+	var yy = today.getFullYear();
+  var dd = (today.getDate() < 10 ? '0' : '') + today.getDate();        
+  var mnt = ((today.getMonth() + 1) < 10 ? '0' : '')+(today.getMonth() + 1); 
+	var hh = (today.getHours() < 10 ? '0' : '') + today.getHours();  
+	var mm = (today.getMinutes() < 10 ? '0' : '') + today.getMinutes();
+  var ss = (today.getSeconds() < 10 ? '0' : '') + today.getSeconds(); 
+  var dateTime = yy+mnt+dd+'_'+hh+mm+ss+'.txt';
+  
   const sMarkup =  document.getElementById('debug').innerHTML; 
   var element = document.createElement('a');
   element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(sMarkup));
-  element.setAttribute('download', 'test');
+  element.setAttribute('download', dateTime);
   element.style.display = 'none';
   document.body.appendChild(element);
   element.click();
   document.body.removeChild(element);
-  
-  
-  
+   
     }
 
 //
