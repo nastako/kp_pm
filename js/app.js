@@ -26,7 +26,7 @@ function saveAs(){
 	var hh = (today.getHours() < 10 ? '0' : '') + today.getHours();  
 	var mm = (today.getMinutes() < 10 ? '0' : '') + today.getMinutes();
   var ss = (today.getSeconds() < 10 ? '0' : '') + today.getSeconds(); 
-  var dateTime = yy+mnt+dd+'_'+hh+mm+ss+'.txt';
+  var dateTime = yy+mnt+dd+'_'+hh+mm+ss+'.html';
   
   const sMarkup =  document.getElementById('debug').innerHTML; 
   var element = document.createElement('a');
