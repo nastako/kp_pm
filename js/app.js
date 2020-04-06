@@ -20,14 +20,16 @@ function saveAs(){
 */
 function saveAs(){
   const sMarkup =  document.getElementById('debug').innerHTML; 
-  var bl = new Blob(sMarkup, {type: "text/html"});
-  var a = document.createElement("a");
-  a.href = URL.createObjectURL(bl);
-  a.download = "c2.html";
-  a.hidden = true;
-  document.body.appendChild(a);
-  a.innerHTML = "something random - nobody will see this, it doesn't matter what you put here";
-  a.click();
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(sMarkup));
+  element.setAttribute('download', 'test');
+  element.style.display = 'none';
+  document.body.appendChild(element);
+  element.click();
+  document.body.removeChild(element);
+  
+  
+  
     }
 
 //
