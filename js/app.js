@@ -11,13 +11,23 @@ function download(filename, text) {
   element.click();
   document.body.removeChild(element);
 }
-
-*/
 function saveAs(){
   const sMarkup =  document.getElementById('debug').innerHTML; 
   var oNewDoc = document.open('text/html');     
   oNewDoc.write( sMarkup + "<hr>" );
   oNewDoc.close();
+    }
+*/
+function saveAs(){
+  const sMarkup =  document.getElementById('debug').innerHTML; 
+  var bl = new Blob(sMarkup, {type: "text/html"});
+  var a = document.createElement("a");
+  a.href = URL.createObjectURL(bl);
+  a.download = "c2.html";
+  a.hidden = true;
+  document.body.appendChild(a);
+  a.innerHTML = "something random - nobody will see this, it doesn't matter what you put here";
+  a.click();
     }
 
 //
